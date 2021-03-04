@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flask - Pagina di Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<body>
+  <div class="container">
+    <h1>
+      LOGIN
+    </h1>
+    <form action ="" method="POST">
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" value ="{{request.form.username}}"></input>
+      <br>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" value ="{{request.form.password}}"></input>
+      <br>
+      <input class="btb btn-default" type="submit" value="LOGIN"></input>
+    </form>
+    {% if error %}
+    <p class="error"><strong>Error:</strong> {{ error }}
+    {% endif %} 
+  </div>
+</body>
+</html>
